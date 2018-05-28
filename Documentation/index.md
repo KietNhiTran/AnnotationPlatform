@@ -88,4 +88,4 @@ From above statical structures (conceptual architect) and dynamic structures (sy
 ![Annotation Platform Value Range Structure - ERD Diagram](images/Annotation_ERD.jpg)
 
 # FMC reference
-![FMC home page] http://www.fmc-modeling.org
+* [FMC home page](http://www.fmc-modeling.org)
