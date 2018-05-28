@@ -10,7 +10,7 @@
 
 # System Conceptual Architect
 ## System definition
-Annotation system is an internal tool for worker to label certain activites and subjects captured in recorded video. The labeled data later will be consumsed by
+Annotation system is an internal tool for **worker** to label certain activites and subjects captured in recorded video. The labeled data later will be consumsed by
 * **Internal development team** for correctness validating and improvement seeking. 
 * **Data scientist** to build model by getting insight from data that enriches orther products within the company with inllegent solution (compliant system, evidence system, intellegent activities recognition).
 
@@ -22,7 +22,7 @@ Below is conceptual architect of the system.
 
 ![Annotation Platform Conceptual Architect - Block Diagram](images/Annotation_System.jpg)
 
-The system consists of front end components and serveral busines logic services (or components) which are in reality implemented as micro-services in cloud deployment platform (Microsoft Asuze). Except the front end component, these services have it own functionality and storage.
+The system consists of front end components and serveral busines logic services (or components) which are in reality implemented as micro-services in cloud deployment model (Microsoft Asuze). Except the front end component, these services have it own functionality and storage.
 
 In general, these services are independent and they communicates with each other mainly via a message queue (**communication queue**). Except the front end components, they communicate with backend business logic service via routed HTTPs REST call.
 
@@ -34,13 +34,13 @@ This is a data collector service which scans video / audio data from **Evidence.
 The collected data is stored as binary (blob) format in **Microsoft Asure blob storage**. Each video is stored as an **asset** and download-able **blob content** file. Once the asset is stored, new preprocessing item is put in communication queue for preprocessing. 
 
 ### Preprocessing
-This services preprocesses the collected data (currently from **Hoover**). The process gets triggerred by new arrived asset raised in communicate queue (ActiveMQ - **preprocessing queue**). 
+This service preprocesses the collected data (currently from **Hoover**). The process gets triggerred by new arrived asset raised in **preprocessing queue** queue (ActiveMQ). 
 
-The processing activites includes:
+Preprocessing activites include:
 * Extract frame for annotating from video.
-* Automatically roughtly classifying extracted frame into activity (**Hit**) of a correspondent type (**HitType**)
+* Automatically roughtly classifying extracted frame into activities (**Hit**) of a correspondent type (**HitType**)
 * Automatically reducing duplicated, similar video frame to minimize required annotating effort.
-* For each recognized "activity" (**Hit**), required annotation **assignment** is generated.
+* For each recognized "activity" (**Hit**), required annotation **assignment**(s) are generated.
 
 ### Annotation service
 This is the backend service of annotation UI (**Cyclops**). It provides :
@@ -50,24 +50,24 @@ This is the backend service of annotation UI (**Cyclops**). It provides :
 
 ### Maturity service
 The service is mainly:
-* checking the maturity (or completion) of annotation for an asset. The service is triggerred by **Annotation Service** via **"maturit queue"** whenever a new annotation result is stored. 
-* storing "matured" **annotation** when maturity check returns "mature" based on annotation system's "maturity logic".
-* triggering annotation assignment extending to annotation service via HTTP REST call whenever maturity checking returns "not-mature" for an asset.
+* checking the maturity (or completion) of annotation for an asset based on **certain logic**. The service is triggerred by **Annotation Service** via **"maturity queue"** whenever a new annotation result is stored. 
+* storing matured **annotation** when maturity check returns "mature" status.
+* triggering annotation assignment extending to annotation service via HTTP REST call whenever maturity checking returns "not-matured" for an asset.
 
 ### Cyclops
 This is a front-ui of annotation platform. It's functionality is (but not restricted to):
 * UI for worker to annotate the **asset**.
-* Access point to annotation **assigment** for login worker and annotation storing service. 
+* Access point to annotation **assigment** for login worker and annotation mainipulting service. 
 
 All the authentication is using "cloud platform" built-in user adminstration and authentication service.
 
 ### Atlas
-This is a internal application for validating the annotation result of the **worker**.
+This is a internal application for auditing the annotation result from the **worker**(s).
 
-*Please checkout system behaviros digrams to understand how the system working*
+*Please checkout system behaviros digrams to understand the dynamic aspect of the system and how it works*
 
 # System behaviors
-Below diagrams expresses system behavior (dynamic aspect of the system) over time and depicting the actions (functinalities) performed by the agents (services / components). 
+Below diagrams expresses system behaviors (dynamic aspect of the system) over time and depicting the actions (functinalities) performed by the agents (services / components). 
 
 ## Data collecting 
 *Coming soon*
