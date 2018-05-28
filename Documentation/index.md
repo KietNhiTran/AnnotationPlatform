@@ -4,6 +4,7 @@
 * System Conceptual Architect
 * Systen Baheviors 
 * System Entity Relationship Diagram (ERD)
+* [Finding and discusion](https://github.com/KietNhiTran/AnnotationPlatform/tree/master/Documentation)
 * FMC Reference
 
 
