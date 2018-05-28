@@ -1,7 +1,7 @@
 # AnnotationPlatform
 
 # Table of Content
-* System Conceptual Architect
+* [System Conceptual Architect](index.md#system-definition)
 * Systen Baheviors 
 * System Entity Relationship Diagram (ERD)
 * [Finding and discusion](https://github.com/KietNhiTran/AnnotationPlatform/tree/master/Documentation)
