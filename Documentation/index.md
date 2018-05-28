@@ -4,7 +4,7 @@
 * [System Conceptual Architect](index.md#system-conceptual-architect)
 * [Systen Baheviors](index.md#system-behavior)
 * [System Entity Relationship Diagram (ERD)](index.md#system-entity-relationship-diagram-(ERD))
-* [Finding and discusion](finding_and_discussion.md)
+* [Finding and discusion](Finding_and_discussion.md)
 * [FMC Reference](index.md#fmc-reference)
 
 
