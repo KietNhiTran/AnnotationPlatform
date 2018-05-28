@@ -1,11 +1,11 @@
 # AnnotationPlatform
 
 # Table of Content
-* [System Conceptual Architect](index.md#system-definition)
-* Systen Baheviors 
-* System Entity Relationship Diagram (ERD)
-* [Finding and discusion](https://github.com/KietNhiTran/AnnotationPlatform/tree/master/Documentation)
-* FMC Reference
+* [System Conceptual Architect](index.md#system-conceptual-architect)
+* [Systen Baheviors](index.md#system-behavior)
+* [System Entity Relationship Diagram (ERD)](index.md#system-entity-relationship-diagram-(ERD))
+* [Finding and discusion](finding_and_discussion.md)
+* [FMC Reference](index.md#fmc-reference)
 
 
 # System Conceptual Architect
