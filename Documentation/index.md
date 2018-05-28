@@ -2,7 +2,7 @@
 
 # Table of Content
 * [System Conceptual Architect](index.md#system-conceptual-architect)
-* [Systen Baheviors](index.md#system-behavior)
+* [Systen Baheviors](index.md#system-behaviors)
 * [System Entity Relationship Diagram (ERD)](index.md#system-entity-relationship-diagram-(ERD))
 * [Finding and discusion](Finding_and_discussion.md)
 * [FMC Reference](index.md#fmc-reference)
